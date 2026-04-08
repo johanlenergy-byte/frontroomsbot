@@ -13,6 +13,7 @@ COPY . /app/
 
 RUN poetry install
 
+
 USER bot
 
 WORKDIR /app/frontroomsbot
