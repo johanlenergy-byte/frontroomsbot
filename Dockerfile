@@ -1,21 +1,5 @@
-FROM python:3.11-slim
-
-ENV PYTHONUNBUFFERED 1
-ENV PYTHONDONTWRITEBYTECODE 1
-
-WORKDIR /app
-
-RUN pip install poetry
-RUN poetry config virtualenvs.create false
-RUN adduser --shell /bin/bash bot
-
-COPY . /app/
-
-RUN poetry install
-
-
-USER bot
-
-WORKDIR /app/frontroomsbot
-
-CMD ["python", "bot.py"]
+<dependency>
+    <groupId>com.google.cloud</groupId>
+    <artifactId>google-cloud-pom-parent</artifactId>
+    <version>1.83.0</version>
+</dependency>
